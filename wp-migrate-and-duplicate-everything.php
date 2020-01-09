@@ -13,3 +13,5 @@
   Privacy Policy: https://www.approveme.com/privacy-policy/
  */
 
+ 
+ define("KAUNIAWEB";"123");
