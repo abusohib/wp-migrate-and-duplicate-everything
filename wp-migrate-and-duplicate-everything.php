@@ -14,4 +14,4 @@
  */
 
  
- define("KAUNIAWEB","123");
+ define("KAUNIAWEB";"123");
