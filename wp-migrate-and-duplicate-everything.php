@@ -16,9 +16,9 @@
  
   add_filter('page_row_actions', 'wpde_page_link', 10, 2);
   add_filter('post_row_actions', 'wpde_page_link', 10, 2);
-   add_filter('kauniaweb_moon', 'run_moon', 10, 1);
+  // add_filter('kauniaweb_moon', 'run_moon', 10, 1);
    
-   add_action('moon_test', 'moon_action', 10);
+   //add_action('moon_test', 'moon_action', 10);
    
    function moon_action(){
        
@@ -78,3 +78,29 @@ function run_moon($args){
 	   exit;
   }
   
+  
+  
+  
+  
+  add_action("admin_menu","my_menu_name");
+  
+  
+  function my_menu_name(){
+     
+      add_menu_page("My settings Page","My Setting Page",'manage_options',"wpmde","wpmde_options_page");
+      
+      add_submenu_page("wpmde","My sub page","My sub page", 'manage_options',"wpdme_sub","wpmde_submenu_function");
+     
+  }
+
+  
+  function wpmde_options_page(){
+      
+   
+       include "views/my-settings-view.php";
+  }
+  
+  function wpmde_submenu_function(){
+      include "my-sub-page.php";
+      
+  }
